@@ -1,0 +1,191 @@
+/* tipografías */
+
+/* IvyPresto DIsplay */
+
+.IvyPresto-Display-Regular {
+  font-family: "ivypresto-display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.IvyPresto-Display-Italic {
+  font-family: "ivypresto-display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.IvyPresto-Display-Bold {
+  font-family: "ivypresto-display", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.IvyPresto-Display-Bold-Italic {
+  font-family: "ivypresto-display", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Paralucent */
+
+.Paralucent-Medium {
+  font-family: "paralucent", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Paralucent-Medium-Italic {
+  font-family: "paralucent", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.Paralucent-Heavy- {
+  font-family: "paralucent", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.Paralucent-Heavy-Italic {
+  font-family: "paralucent", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* estilos para que el cursor sea un circulito */
+
+/* efectos del cursor */
+
+html,
+body {
+  cursor: none !important;
+  scroll-behavior: smooth;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  background-color: #000;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, background-color 0.2s ease;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+.cursor-grow {
+  transform: translate(-50%, -50%) scale(1.6);
+  background-color: transparent;
+  border: 2px solid #000;
+  background-color: #000;
+}
+
+/* estilos para la navbar -- header */
+
+/* Navbar base */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  height: 100px;
+  transition: all 0.3s ease;
+}
+
+/* Estado reducido al hacer scroll */
+.navbar.shrink {
+  height: 60px;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.logo img:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+/* Logo reducido */
+.navbar.shrink .logo img {
+  height: 40px;
+}
+
+/* Links */
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-family: "paralucent", sans-serif;
+  font-size: 40px;
+  margin: 25px;
+  transition: font-size 0.3s ease;
+}
+
+/* Links reducidos */
+.navbar.shrink .nav-links a {
+  font-size: 28px;
+  margin: 15px;
+}
+
+/* Icono hamburguesa */
+.burger {
+  display: none;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-show {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 15px 0;
+    font-size: 28px;
+  }
+
+  /* Ajuste shrink en móvil */
+  .navbar.shrink {
+    height: 50px;
+    padding: 8px 16px;
+  }
+  .navbar.shrink .nav-links a {
+    font-size: 24px;
+  }
+}
