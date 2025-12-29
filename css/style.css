@@ -1,68 +1,23 @@
-/* Reset básico */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* tipografías */
-
-/* IvyPresto DIsplay */
-
-.IvyPresto-Display-Regular {
-  font-family: "ivypresto-display", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.IvyPresto-Display-Italic {
-  font-family: "ivypresto-display", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.IvyPresto-Display-Bold {
-  font-family: "ivypresto-display", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.IvyPresto-Display-Bold-Italic {
-  font-family: "ivypresto-display", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* Paralucent */
-
-.Paralucent-Medium {
+/* h1 {
   font-family: "paralucent", sans-serif;
   font-weight: 400;
-  font-style: normal;
+font-style: normal;
 }
 
-.Paralucent-Medium-Italic {
-  font-family: "paralucent", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
+h2 {
+  font-family: "ivypresto-display", serif;
+font-weight: 400;
+font-style: normal;
+} */
 
-.Paralucent-Heavy- {
-  font-family: "paralucent", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.Paralucent-Heavy-Italic {
-  font-family: "paralucent", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* estilos para que el cursor sea un circulito */
-
-/* efectos del cursor */
-
+/* CURSOR */
 html,
 body {
   cursor: none !important;
@@ -91,10 +46,146 @@ body {
   background-color: #000;
 }
 
+/* NAVBAR */
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: inherit;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+}
+
+.menu-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+}
+
+.logo-menu a {
+  font-family: var(--fraunces);  
+  text-decoration: none; 
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--black); 
+
+}
+
+nav .menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav .menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav .menu-right {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  height: 70px;
+  padding: 0.5rem 2rem;
+  background: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+  color: var(--black);
+  cursor: pointer;
+  transition: var(--transition);
+  font: var(--nav);
+}
+
+.lang-btn:hover {
+  font-weight: 700;
+  background-color: #0a090830;
+}
+
+/* MENÚ */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: var(--black);
+  text-decoration: none;
+  font:var(--nav);
+  transition: color 0.3s;
+}
+
+.menu-right li {
+  display: flex;
+  align-items: center;
+}
+
+nav.menu-open .menu-left,
+nav.menu-open .menu-right {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* BURGER */
+.burger {
+  font-size: 2rem;
+  color: var(--black);
+  display: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* estilos para la navbar -- header */
 
 /* Navbar base */
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -108,33 +199,33 @@ body {
 
   height: 100px;
   transition: all 0.3s ease;
-}
+} */
 
 /* Estado reducido al hacer scroll */
-.navbar.shrink {
+/* .navbar.shrink {
   height: 60px;
   padding: 10px 20px;
-}
+} */
 
 /* Logo */
-.logo img {
+/* .logo img {
   height: 60px;
   width: auto;
   transition: all 0.3s ease;
-}
+} */
 
-.logo img:hover {
+/* .logo img:hover {
   opacity: 0.8;
   transform: scale(1.2);
-}
+} */
 
 /* Logo reducido */
-.navbar.shrink .logo img {
+/* .navbar.shrink .logo img {
   height: 40px;
-}
+} */
 
 /* Links */
-.nav-links a {
+/* .nav-links a {
   margin-left: 20px;
   text-decoration: none;
   color: #000;
@@ -143,25 +234,25 @@ body {
   font-size: 40px;
   margin: 25px;
   transition: font-size 0.3s ease;
-}
+} */
 
 /* Links reducidos */
-.navbar.shrink .nav-links a {
+/* .navbar.shrink .nav-links a {
   font-size: 28px;
   margin: 15px;
-}
+} */
 
 /* Icono hamburguesa */
-.burger {
+/* .burger {
   display: none;
   font-size: 30px;
   color: #333;
   cursor: pointer;
-}
+} */
 
-/* Responsive */
+/* RESPONSIVE MEDIA QUERIES */
 @media screen and (max-width: 768px) {
-  .burger {
+  /* .burger {
     display: block;
   }
 
@@ -185,14 +276,129 @@ body {
   .nav-links a {
     margin: 15px 0;
     font-size: 28px;
-  }
+  } */
 
   /* Ajuste shrink en móvil */
-  .navbar.shrink {
+  /* .navbar.shrink {
     height: 50px;
     padding: 8px 16px;
   }
   .navbar.shrink .nav-links a {
     font-size: 24px;
-  }
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* MENÚ */
+  .menu-container {
+    padding: 0;
+} 
+
+.menu-left,
+.menu-right {
+    display: none !important;
+}
+
+.burger {
+    display: block;
+}
+
+nav.menu-open .menu-container {
+    background-color: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 70px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: var(--border);
+    z-index: 1000;
+}
+
+nav.menu-open .menu-left,
+nav.menu-open .menu-right,
+nav.menu-open #lang-toggle {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+nav.menu-open .menu a {
+    color: var(--black) !important; 
+    font-size: 2rem;
+    text-decoration: none;
+}  
+
+nav.menu-open #lang-toggle {
+    display: block !important;
+    width: 100vw;          
+    margin: 0;            
+    padding: 1rem 0;       
+    text-align: center;
+    box-sizing: border-box;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    background-color: inherit;
+    color: var(--black);
+    left: 0;  
+    font-size: 2rem;               
+}
+
+nav.menu-open #lang-toggle:hover {
+    background-color: #0a090830;
+}
+
+nav.menu-open .menu-right li {
+    display: flex;    
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+}
+
+nav.menu-open .menu-right {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0;
+    width: 100%;               
+}
+
+.logo-menu {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.burger {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
 }

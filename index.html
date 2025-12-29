@@ -4,19 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica Final API - Cócteles</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- tipografía exportada de Adobe Fonts -->
+    <!-- ENLACE CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- EMOJIS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <!-- TIPOGRAFÍA ADOBE -->
     <link rel="stylesheet" href="https://use.typekit.net/awx8gzq.css" />
     <link rel="stylesheet" href="https://use.typekit.net/awx8gzq.css" />
   </head>
+
+
   <body>
-    <!-- para el efecto de que el cursor del ratón sea un circulito rojo -->
+    <!-- CURSOR -->
     <div class="cursor"></div>
 
+     <!-- MENÚ WEB -->
+     <nav>
+      <div class="menu-container">
+        <ul class="menu menu-left">
+          <li><a href="location.html" id="menu-localizacion">RECETAS</a></li>
+          <li><a href="clima.html" class="btn" id="menu-clima">NOTICIAS</a></li>
+        </ul>  
+
+        <div class="logo-menu">
+          <a href="index.html">©</a>
+        </div>
+
+        <ul class="menu menu-right">
+          <li><a href="lugares.html" id="menu-lugares">HISTORIA</a></li>
+          <li><a href="lugares.html" id="menu-lugares">SITIOS</a></li>
+        </ul>
+
+        <div class="burger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+
+
     <!-- Menú de navegación -->
-    <header class="navbar">
+    <!-- <header class="navbar">
       <div class="logo">
         <a href="index.html">
           <img
@@ -24,21 +55,25 @@
             alt="Logo"
           />
         </a>
-      </div>
+      </div> -->
       <!-- Icono hamburguesa -->
-      <div class="burger">
+      <!-- <div class="burger">
         <i class="fas fa-bars"></i>
-      </div>
+      </div> -->
 
       <!-- Menú de navegación -->
-      <nav class="nav-links menu">
+      <!-- <nav class="nav-links menu">
         <a href="recetas.html">Recetas</a>
         <a href="noticias.html">Noticias</a>
         <a href="historia.html">Historia</a>
         <a href="nosotros.html">Nosotros</a>
       </nav>
-    </header>
+    </header> -->
 
+    <!-- JQUERY DE CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- ENLACE JS SCRIPT -->
     <script src="js/script.js"></script>
   </body>
 </html>
