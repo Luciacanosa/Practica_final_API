@@ -13,6 +13,27 @@
   --h1: 17vw "ivypresto-display", serif;
   --politics: 300 1rem "paralucent", sans-serif;
   --social: 300 1.5rem "paralucent", sans-serif;
+  --yellow: #e8f73a;
+  --orange: #f94a23;
+  --blue: #4897e5;
+  --pink: #f25e9c;
+}
+
+/* COLOR THEME -> BODY */
+.theme-yellow {
+  background-color: var(--yellow);
+}
+
+.theme-orange {
+  background-color: var(--orange);
+}
+
+.theme-blue {
+  background-color: var(--blue);
+}
+
+.theme-pink {
+  background-color: var(--pink);
 }
 
 /* CURSOR */
@@ -142,6 +163,7 @@ nav.menu-open .menu-right {
   font-family: var(--inter);
   font-size: 0.8rem;
   text-align: center;
+  border: var(--border);
 }
 
 .footer-bottom {
