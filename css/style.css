@@ -130,6 +130,140 @@ nav.menu-open .menu-right {
 }
 
 
+/* FOOTER */
+#footer {
+  border: var(--border);
+  padding: 2rem 4rem; 
+  display: flex;
+  flex-direction: column;
+  font-family: var(--inter);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-h1 {
+  font-size: 17vw;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-left {
+  flex: 1 1 auto;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.footer-left .politics {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-right {
+  flex: 0 0 auto;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--black);
+}
+
+.footer-right .social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.footer-right .social i {
+  color: var(--black);
+}
+
+.footer-bottom .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+
+/* NEWSLETTER */
+.newsletter {
+  width: 100%;
+  margin: 3rem 0;
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 4rem;
+}
+
+/* Columna izquierda */
+.newsletter-left {
+  flex: 1;
+  text-align: left;
+  align-items: flex-end; 
+  justify-content: flex-start;
+}
+
+.newsletter-title {
+  font-size: 1.2rem;
+}
+
+/* Columna derecha */
+.newsletter-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#newsletter-form {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+#newsletter-email {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0;
+  background: transparent;
+  font-size: 1rem;
+}
+
+#newsletter-email::placeholder {
+  color: black;
+}
+
+#newsletter-form button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#newsletter-email.error::placeholder {
+  color: #555;
+}
 
 
 
@@ -281,7 +415,7 @@ nav.menu-open .menu-right {
 
 
   /* MENÚ */
-  .menu-container {
+.menu-container {
   padding: 0;
   flex-direction: column; 
   align-items: center;
@@ -362,6 +496,85 @@ nav.menu-open .menu-right {
 }
 
 
+/* FOOTER */
+#footer {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-left,
+.footer-right {
+  width: 100%;
+  flex: unset;
+}
+
+.footer-left .politics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-right .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: auto !important;
+  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.footer-bottom .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+}  
+
+.text-info p {
+  padding: 1rem 1.5rem;
+}
+
+.text-info .p2 {
+  padding: 0.5rem 1.5rem;
+}
+
+.newsletter {
+  flex-direction: column; /* apilar arriba/abajo */
+  align-items: stretch;   /* ancho completo */
+  gap: 1.5rem;
+}
+
+.newsletter-left,
+.newsletter-right {
+  flex: unset; /* quitar 1/3 y 2/3 */
+  width: 100%;
+  text-align: center; /* opcional, puedes dejar left */
+}
+
+.newsletter-left {
+  order: 1; /* primero arriba */
+  text-align: left; /* si quieres alineado a la izquierda */
+}
+
+.newsletter-right {
+  order: 2; /* abajo */
+}
 
 
 

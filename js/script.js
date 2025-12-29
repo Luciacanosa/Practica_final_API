@@ -5,6 +5,59 @@ $(".burger i").on("click", function() {
 });
 
 
+
+
+// NEWSLETTER VALIDACIÓN
+
+const form = document.getElementById("newsletter-form");
+const emailInput = document.getElementById("newsletter-email");
+
+const defaultPlaceholder = "Escribe tu email";
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = emailInput.value.trim();
+
+  if (email === "") {
+    showError("Introduce tu email");
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    showError("Email no válido");
+    return;
+  }
+
+  // OK
+  emailInput.classList.remove("error");
+  emailInput.placeholder = defaultPlaceholder;
+  alert("¡Gracia's por suscribirte!");
+  form.reset();
+});
+
+emailInput.addEventListener("input", () => {
+  emailInput.classList.remove("error");
+  emailInput.placeholder = defaultPlaceholder;
+});
+
+function showError(message) {
+  emailInput.value = "";
+  emailInput.classList.add("error");
+  emailInput.placeholder = message;
+}
+
+
+
+
+
+
+
+
+
+
 // CURSOR
 $(document).mousemove(function (e) {
   $(".cursor").css({
