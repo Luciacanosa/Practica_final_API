@@ -5,17 +5,12 @@
   box-sizing: border-box;
 }
 
-/* h1 {
-  font-family: "paralucent", sans-serif;
-  font-weight: 400;
-font-style: normal;
+:root {
+  --black: #000000;
+  --ivypresto: "ivypresto-display", serif;
+  --paralucent:"paralucent", sans-serif;
+  --nav: 300 1.5rem "paralucent", sans-serif;
 }
-
-h2 {
-  font-family: "ivypresto-display", serif;
-font-weight: 400;
-font-style: normal;
-} */
 
 /* CURSOR */
 html,
@@ -46,6 +41,7 @@ body {
   background-color: #000;
 }
 
+
 /* NAVBAR */
 nav {
   width: 100%;
@@ -68,16 +64,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem 0 2rem;
+  padding: 0 2rem;
 }
 
 .logo-menu a {
-  font-family: var(--fraunces);  
+  font-family: var(--ivypresto); 
+  font-size: 3rem;
   text-decoration: none; 
-  font-weight: bold;
-  font-size: 2rem;
   color: var(--black); 
-
 }
 
 nav .menu-container {
@@ -96,26 +90,6 @@ nav .menu {
 nav .menu-right {
   display: flex;
   align-items: center;
-}
-
-.lang-btn {
-  height: 70px;
-  padding: 0.5rem 2rem;
-  background: inherit;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: var(--border);
-  color: var(--black);
-  cursor: pointer;
-  transition: var(--transition);
-  font: var(--nav);
-}
-
-.lang-btn:hover {
-  font-weight: 700;
-  background-color: #0a090830;
 }
 
 /* MENÚ */
@@ -154,9 +128,6 @@ nav.menu-open .menu-right {
   display: none;
   cursor: pointer;
 }
-
-
-
 
 
 
@@ -311,94 +282,87 @@ nav.menu-open .menu-right {
 
   /* MENÚ */
   .menu-container {
-    padding: 0;
+  padding: 0;
+  flex-direction: column; 
+  align-items: center;
 } 
 
 .menu-left,
 .menu-right {
-    display: none !important;
+  display: none !important;
 }
 
 .burger {
-    display: block;
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 
 nav.menu-open .menu-container {
-    background-color: inherit;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 70px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border: var(--border);
-    z-index: 1000;
+  background-color: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 70px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: var(--border);
+  z-index: 1000;
 }
 
 nav.menu-open .menu-left,
-nav.menu-open .menu-right,
-nav.menu-open #lang-toggle {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+nav.menu-open .menu-right {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 nav.menu-open .menu a {
-    color: var(--black) !important; 
-    font-size: 2rem;
-    text-decoration: none;
+  color: var(--black) !important; 
+  font-size: 2rem;
+  text-decoration: none;
 }  
 
-nav.menu-open #lang-toggle {
-    display: block !important;
-    width: 100vw;          
-    margin: 0;            
-    padding: 1rem 0;       
-    text-align: center;
-    box-sizing: border-box;
-    border-top: var(--border);
-    border-bottom: var(--border);
-    background-color: inherit;
-    color: var(--black);
-    left: 0;  
-    font-size: 2rem;               
-}
-
-nav.menu-open #lang-toggle:hover {
-    background-color: #0a090830;
-}
-
 nav.menu-open .menu-right li {
-    display: flex;    
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0; 
+  display: flex;    
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0; 
 }
 
 nav.menu-open .menu-right {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 0;
-    width: 100%;               
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0;
+  width: 100%;               
 }
 
 .logo-menu {
-    position: absolute;
-    top: 15px;
-    left: 20px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  margin: 0;
 }
 
 .burger {
-    position: absolute;
-    top: 15px;
-    right: 20px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
+
+
+
+
+
 }
