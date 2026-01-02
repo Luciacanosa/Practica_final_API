@@ -3,43 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Práctica Final API - Cócteles</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Práctica Final API - Recetas</title>
 
-    <!-- tipografía exportada de Adobe Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/awx8gzq.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/awx8gzq.css" />
   </head>
 
-  <body>
-    <!-- para el efecto de que el cursor del ratón sea un circulito rojo -->
+  <!-- body -->
+  <body class="theme-yellow">
+    <!-- CURSOR -->
     <div class="cursor"></div>
 
-    <!-- Menú de navegación -->
-    <header class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="assets/iconos nav bar/logo dragon kyoto-01.png"
-            alt="Logo"
-          />
-        </a>
-      </div>
-      <!-- Icono hamburguesa -->
-      <div class="burger">
-        <i class="fas fa-bars"></i>
-      </div>
+    <!-- nav -->
+    <nav>
+      <div class="menu-container">
+        <ul class="menu menu-left">
+          <li><a href="recetas.html">RECETAS</a></li>
+          <li>
+            <a href="noticias.html" class="btn">NOTICIAS</a>
+          </li>
+        </ul>
 
-      <!-- Menú de navegación -->
-      <nav class="nav-links menu">
-        <a href="recetas.html">Recetas</a>
-        <a href="noticias.html">Noticias</a>
-        <a href="historia.html">Historia</a>
-        <a href="nosotros.html">Nosotros</a>
-      </nav>
-    </header>
+        <div class="logo-menu">
+          <a href="index.html">©</a>
+        </div>
 
-    <script src="js/recetas.html"></script>
+        <ul class="menu menu-right">
+          <li><a href="historia.html">HISTORIA</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+        </ul>
+
+        <div class="burger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <main>
+      <section class="hero">
+        <h1 class="hero-title">RECETA’S</h1>
+
+        <div class="politics">
+          <p>TODOS</p>
+          <p>AFRUTADOS</p>
+          <p>INTENSOS</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="js/recetas.js"></script>
   </body>
 </html>

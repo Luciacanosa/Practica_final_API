@@ -684,3 +684,20 @@ body {
     font-size: 2.5rem;
   }
 }
+/* recetas*/
+
+.theme-yellow {
+  background-color: var(--yellow);
+}
+
+/* reutilice s el hero existente */
+.hero {
+  min-height: 80vh;
+  padding: var(--page-padding);
+}
+
+.hero-subtitle {
+  margin-top: 40px;
+  font: var(--body-font);
+  letter-spacing: 2px;
+}
