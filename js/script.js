@@ -4,9 +4,6 @@ $(".burger i").on("click", function() {
   $("nav").toggleClass("menu-open");
 });
 
-
-
-
 // NEWSLETTER VALIDACIÓN
 
 const form = document.getElementById("newsletter-form");
