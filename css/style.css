@@ -776,6 +776,7 @@ button {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem 0 0;
+  gap: 2rem;
 }
 
 /* .pdf-template {
