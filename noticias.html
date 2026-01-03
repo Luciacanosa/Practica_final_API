@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Práctica Final API - Cócteles</title>
-
-    <!-- ENLACE CSS -->
+    <title>Noticias - Cócteles</title>
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- EMOJIS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
-    <!-- TIPOGRAFÍA ADOBE -->
     <link rel="stylesheet" href="https://use.typekit.net/nuo4xsn.css" />
   </head>
 
   <body class="theme-pink">
-    <!-- CURSOR -->
     <div class="cursor"></div>
 
-    <!-- MENÚ WEB -->
     <nav>
       <div class="menu-container">
         <ul class="menu menu-left">
           <li><a href="location.html" id="menu-localizacion">RECETAS</a></li>
           <li>
-            <a href="noticias.html" class="btn" id="menu-clima">NOTICIAS</a>
+            <a href="index.html" class="btn" id="menu-clima">HOME</a>
           </li>
         </ul>
 
@@ -46,6 +38,53 @@
         </div>
       </div>
     </nav>
+
+    <main>
+      <section class="hero-news">
+        <h1 class="hero-title">NOTICIAS</h1>
+        <div class="gradient-transition"></div>
+      </section>
+
+      <section class="news-content">
+        <div class="news-grid">
+          <article class="news-item">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=500"
+                alt="Cocktail"
+              />
+            </div>
+            <div class="news-text">
+              <span>TENDENCIAS</span>
+              <h3>Los nuevos mixers de 2024</h3>
+              <p>
+                Descubre cómo la botánica está cambiando la forma de entender la
+                coctelería moderna en Europa.
+              </p>
+              <a href="#" class="read-more">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="news-item">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=500"
+                alt="Cocktail"
+              />
+            </div>
+            <div class="news-text">
+              <span>EVENTOS</span>
+              <h3>Noche de Jazz & Gin</h3>
+              <p>
+                El próximo viernes inauguramos las sesiones de música en vivo
+                con catas exclusivas de ginebras locales.
+              </p>
+              <a href="#" class="read-more">Leer más →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer id="footer">
