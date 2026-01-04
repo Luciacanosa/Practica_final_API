@@ -13,6 +13,7 @@
   --h1: 17vw "ivypresto-display", serif;
   --h2: 300 3vw "ivypresto-display", serif;
   --h3: 300 1.5rem "paralucent", sans-serif;
+  --random-text: 300 1.1rem "paralucent", sans-serif;
   --btn-normal: 300 1.5rem "paralucent", sans-serif;
   --politics: 300 1rem "paralucent", sans-serif;
   --social: 300 1.5rem "paralucent", sans-serif;
@@ -818,6 +819,11 @@ button {
   white-space: pre-line;
 }
 
+#cocktail-ingredients,
+#cocktail-instructions {
+  font: var(--random-text);
+}
+
 .info-right ul {
   list-style: disc;
   padding-left: 1.2rem;
@@ -830,4 +836,34 @@ button {
 button {
   position: relative;
   z-index: 9999;
+}
+
+
+
+
+
+
+
+
+
+#cocktail-section {
+  position: relative;
+  background-size: cover; /* Asegura que el fondo cubra toda la sección */
+  background-position: center; /* Centra el fondo */
+  height: 100vh; /* Ajusta a la altura de la ventana */
+}
+
+.cocktail-content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cocktail-image img {
+  width: 50%; /* Puedes ajustar el tamaño de la imagen según lo que necesites */
+  border-radius: 10px; /* Si quieres bordes redondeados para la bebida */
+  z-index: 2; /* Asegura que la imagen de la bebida esté por encima del fondo */
 }
