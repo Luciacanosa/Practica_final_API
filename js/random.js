@@ -20,7 +20,7 @@ const ALLOWED_COCKTAILS = [
 
 // URL de las imágenes con fondo ya incluido
 const cocktailImages = {
-  "17836": "../img/Acapulco_with_background.jpg",  // Usa la imagen con fondo incluido
+  "17836": "../img/fin.jpg",  // Usa la imagen con fondo incluido
   // Agrega más imágenes de cócteles con fondo aquí
 };
 
