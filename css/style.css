@@ -294,7 +294,6 @@ nav.menu-open .menu-right {
 
 /* RESPONSIVE MEDIA QUERIES */
 @media screen and (max-width: 768px) {
-
   /* MENÚ */
   .menu-container {
     padding: 0;
@@ -599,4 +598,34 @@ body {
   margin-top: 40px;
   font: var(--body-font);
   letter-spacing: 2px;
+}
+/* Fondo amarillo */
+body.recetas {
+  background-color: #e6ff3f;
+}
+
+/* Grid de recetas */
+.recetas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 4rem 0;
+}
+
+/* Card */
+.receta-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.receta-nombre {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.receta-img {
+  width: 100%;
+  height: 260px;
+  background-color: #cfcfcf;
 }
