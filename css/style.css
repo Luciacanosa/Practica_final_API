@@ -67,7 +67,7 @@
 /* CURSOR */
 html,
 body {
-  cursor: none !important;
+  cursor: none;
   scroll-behavior: smooth;
 }
 
