@@ -94,7 +94,7 @@ const ALLOWED_COCKTAILS = [
 
 // URL IMG FONDO
 const cocktailImages = {
-  "17209": "../img/barracuda.jpg",
+  "17209": "../img/barrucada.jpg",
   "14446": "../img/koolaid.jpg",
   "17228": "../img/addison.jpg",
   "17836": "../img/acapulco.jpg",
