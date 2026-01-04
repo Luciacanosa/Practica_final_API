@@ -4,9 +4,6 @@ $(".burger i").on("click", function() {
   $("nav").toggleClass("menu-open");
 });
 
-
-
-
 // NEWSLETTER VALIDACIÓN
 
 const form = document.getElementById("newsletter-form");
@@ -49,15 +46,6 @@ function showError(message) {
   emailInput.placeholder = message;
 }
 
-
-
-
-
-
-
-
-
-
 // CURSOR
 $(document).mousemove(function (e) {
   $(".cursor").css({
@@ -82,42 +70,3 @@ $("a").hover(
     $(".cursor").removeClass("cursor-grow");
   }
 );
-
-// HEADER
-
-// efecto disminuir head al hacer scroll
-
-/*jslint devel: true*/
-/*eslint-env browser*/
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const header = document.querySelector(".navbar");
-//   const threshold = window.innerHeight / 2;
-
-//   window.addEventListener("scroll", function () {
-//     if (window.scrollY > threshold) {
-//       header.classList.add("shrink");
-//     } else {
-//       header.classList.remove("shrink");
-//     }
-//   });
-// });
-
-// menu hambuerguesa para el navbar
-// lógica del menu (simplemente el clik en un icono)
-
-// selección de elementos del html
-
-// let burger = document.querySelector(".burger > i");
-// let menu_opt = document.querySelector(".menu");
-
-// definimos evneto click sobre le botón del menú
-// burger.addEventListener("click", function () {
-//   burger.classList.toggle("fa-bars");
-//   burger.classList.toggle("fa-times");
-//   menu_opt.classList.toggle("menu-show");
-// });
-
-
-
-

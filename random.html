@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Historia - Cócteles</title>
+    <title>Random - Cócteles</title>
 
     <!-- FAVICON -->
     <link rel="icon" href="img/favicon.webp" type="image/png">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/nuo4xsn.css" />
   </head>
 
-  <body class="theme-orange">
+  <body class="theme-yellow">
 
     <!-- CURSOR -->
     <div class="cursor"></div>
@@ -50,6 +50,66 @@
         </div>
       </div>
     </nav>
+
+
+
+
+
+
+    <!-- CONTENIDO -->
+    <section id="cocktail-section" class="cocktail-section">
+  <div class="cocktail-background"></div>  <!-- FONDO DE LA SECCIÓN -->
+  <div class="cocktail-content">
+    <div class="cocktail-image">
+      <img src="#" id="cocktailImg" alt="Cóctel">
+    </div>
+    <div class="cocktail-details">
+      <h2 id="cocktail-name">NOMBRE CÓCTEL</h2>
+      <div class="info-block">
+        <h3>INGREDIENTES</h3>
+        <ul id="cocktail-ingredients"></ul>
+      </div>
+      <div class="info-block">
+        <h3>PREPARACIÓN</h3>
+        <p id="cocktail-instructions"></p>
+      </div>
+      <div class="cocktail-actions">
+        <a href="recetas.html" class="btn-normal" id="backBtn">← VOLVER</a>
+        <a href="#" class="btn-normal" id="randomBtn">SORPRÉNDEME</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+    <!-- PLANTILLA OCULTA PARA PDF
+    <div id="pdfTemplate" class="pdf-template">
+      <h1>Receta de cóctel</h1>
+    
+      <h2 id="pdfTitle"></h2>
+      <img id="pdfImage" style="width:300px; border-radius:10px;" />
+    
+      <div class="info-block">
+        <h3>INGREDIENTES</h3>
+        <ul id="pdfIngredients"></ul>
+      </div>
+    
+      <div class="info-block">
+        <h3>PREPARACIÓN</h3>
+        <p id="pdfInstructions"></p>
+      </div>
+    
+      <hr />
+      <p>CO©KTAIL's</p>
+    </div> -->
+
+
+
+
+
+
+
+
 
     <!-- FOOTER -->
     <footer id="footer">
@@ -122,7 +182,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- ENLACE JS HISTORIA -->
-    <script src="js/historia.js"></script>
+    <!-- ENLACE JS RANDOM -->
+    <script src="js/random.js"></script>
   </body>
 </html>
