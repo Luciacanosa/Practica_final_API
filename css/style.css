@@ -718,8 +718,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 2rem;
+  height: auto;  /* Aseguramos que la altura sea ajustable */
+  min-height: 70vh;  /* La imagen y el contenido ocuparán al menos el 70% de la altura de la ventana */
+  padding: 3rem 2rem 2rem; /* Ajustamos el padding para darle espacio a la imagen */
+  margin-top: 70px;
 }
 
 .cocktail-content {
@@ -752,10 +754,10 @@ body {
 }
 
 .cocktail-image img {
-  width: 100%;
-  height: 100%;  /* Hace que la imagen ocupe toda la altura del contenedor */
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
-  border-radius: 0;
+  width: 100%;           /* Ocupa todo el ancho de su contenedor */
+  height: 100%;          /* Mantiene la proporción de la imagen */
+  border-radius: 0;      /* Sin redondeo de las esquinas */
+  object-fit: contain;
 }
 
 .cocktail-details {
@@ -866,6 +868,8 @@ button {
 @media screen and (max-width: 768px) {
   #cocktail-section {
     flex-direction: column;
+    margin-top: 120px; /* Aseguramos que el navbar no se superponga */
+    padding: 1.5rem; 
   }
 
   .cocktail-content {
@@ -880,6 +884,6 @@ button {
 
   .cocktail-image img {
     max-width: 80%;
-    margin: 0 auto;
+    margin: auto;
   }
 }
