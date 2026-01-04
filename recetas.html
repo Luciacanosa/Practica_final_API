@@ -22,24 +22,34 @@
 
   <!-- CLASE SOLO PARA EL FONDO -->
   <body class="recetas">
-    <!-- header ===== -->
-    <header>
-      <nav>
-        <ul>
+
+    <!-- CURSOR -->
+    <div class="cursor"></div>
+
+    <!-- MENÚ WEB -->
+    <nav>
+      <div class="menu-container">
+        <ul class="menu menu-left">
           <li><a href="recetas.html">RECETAS</a></li>
-          <li><a href="noticias.html">NOTICIAS</a></li>
+          <li>
+            <a href="noticias.html" class="btn">NOTICIAS</a>
+          </li>
         </ul>
 
-        <div class="logo">
-          <a href="index.html">C</a>
+        <div class="logo-menu">
+          <a href="index.html">©</a>
         </div>
 
-        <ul>
+        <ul class="menu menu-right">
           <li><a href="historia.html">HISTORIA</a></li>
-          <li><a href="sitios.html">SITIOS</a></li>
+          <li><a href="sitios.html" id="menu-lugares">SITIOS</a></li>
         </ul>
-      </nav>
-    </header>
+
+        <div class="burger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
 
     <!-- ===== MAIN ===== -->
     <main>
@@ -93,22 +103,78 @@
       </section>
     </main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-      <h2>COCKTAIL’S</h2>
-
-      <div class="footer-content">
-        <p>
-          SUSCRÍBETE A<br />
-          NUESTRA NEWSLETTER
-        </p>
-
-        <p>Recibe recetas exclusivas</p>
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="footer-h1">CO©KTAIL's</div>
       </div>
 
-      <p>© 2025 COCKTAIL’S</p>
+      <div class="newsletter">
+        <div class="newsletter-left">
+          <p class="newsletter-title">SUSCRÍBETE A <br />NUESTRA NEWSLETTER</p>
+        </div>
+
+        <div class="newsletter-right">
+          <form id="newsletter-form">
+            <input
+              type="email"
+              id="newsletter-email"
+              placeholder="Escribe tu email"
+            />
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-left">
+          <div class="politics">
+            <p id="footer-politica">POLÍTICA DE PRIVACIDAD</p>
+            <p id="footer-aviso">AVISO LEGAL</p>
+            <p id="footer-cookies">CONFIGURACIÓN DE COOKIES</p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="social">
+            <a
+              href="https://www.instagram.com/udit.es/?igsh=b29jdXVzaXh1MW4y"
+              target="_blank"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href="https://x.com/udit_es?s=11&t=XTs37GJ9GUh0VqnBCOTRjA"
+              target="_blank"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a
+              href="https://www.facebook.com/UDITuniversidad/?locale=es_ES"
+              target="_blank"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>© 2025 CO©KTAIL's</p>
+        </div>
+      </div>
     </footer>
 
-    <script src="js/recetas.js"></script>
+    <!-- JQUERY DE CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- ENLACE JS SCRIPT -->
+    <script src="js/script.js"></script>
   </body>
 </html>
