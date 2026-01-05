@@ -526,6 +526,10 @@ nav.menu-open .menu-right {
     font-family: var(--ivypresto);
   }
 
+  .info-block {
+    flex-direction: column;
+  }
+
   .info-block h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
