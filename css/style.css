@@ -319,6 +319,20 @@ nav.menu-open .menu-right {
   color: #555;
 }
 
+/* HERO TITLE */
+.hero-intro {
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: flex-end;
+  background-color: inherit; 
+  font: var(--h1);
+  border: var(--border);
+  padding-top: 20px;
+}
+
+
+
 /* RESPONSIVE MEDIA QUERIES */
 @media screen and (max-width: 768px) {
   /* MENÚ */
@@ -485,6 +499,11 @@ nav.menu-open .menu-right {
 
   .newsletter-title {
     font-size: 2rem;
+  }
+
+  /* HERO TITLE */
+  .hero-intro h1 {
+    font-size: 20vw;
   }
 
   /* RANDOM */
