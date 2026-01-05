@@ -322,16 +322,14 @@ nav.menu-open .menu-right {
 /* HERO TITLE */
 .hero-intro {
   height: 100vh;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-color: inherit; 
+  background-color: inherit;
   font: var(--h1);
   border: var(--border);
   padding-top: 20px;
 }
-
-
 
 /* RESPONSIVE MEDIA QUERIES */
 @media screen and (max-width: 768px) {
@@ -881,9 +879,6 @@ button {
   }
 }
 
-
-
-
 /* ____________________________________________________________________*/
 
 /* HISTORIA */
@@ -912,8 +907,7 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
-  }
-
+}
 
 .container:nth-child(1) {
   animation-delay: 0s;
@@ -962,10 +956,10 @@ button {
 }
 
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
-  bottom: 0;          /* 👈 clave */
+  bottom: 0; /* 👈 clave */
   left: 50%;
   width: 2px;
   background-color: var(--black);
@@ -985,33 +979,136 @@ button {
   left: -17px;
 }
 
-
-
 @media screen and (max-width: 768px) {
   .timeline {
-      margin: 50px auto;
+    margin: 50px auto;
   }
 
   .timeline::after {
-      left: 31px;
+    left: 31px;
   }
 
   .timeline.animate::after {
     animation: moveline 2.5s ease forwards;
   }
-  
 
   .container {
-      width: 100%;
-      padding-left: 80px;
-      padding-right: 25px;
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
   }
 
   .right-container {
-      left: 0;
+    left: 0;
   }
 
-  .left-container img, .right-container img {
-      left: 14px;
+  .left-container img,
+  .right-container img {
+    left: 14px;
   }
+}
+
+/* css para la pagina de sitios */
+
+/* HERO */
+.sitios-hero {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  border-bottom: var(--border);
+  margin-top: 100px;
+}
+
+.sitios-title {
+  font: var(--h1);
+  text-align: center;
+}
+
+/* GRID */
+.sitios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 4rem 5%;
+  justify-content: center;
+}
+
+/* TARJETAS SITIOS */
+.sitio-card {
+  width: 350px;
+  border: var(--border);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.sitio-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Imagen */
+.sitio-img {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-bottom: var(--border);
+}
+
+.sitio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info principal */
+.sitio-info {
+  padding: 1.5rem;
+}
+
+.sitio-nombre {
+  font: var(--h3);
+  margin-bottom: 0.5rem;
+}
+
+.sitio-ciudad {
+  font: var(--random-text);
+  margin-bottom: 1.5rem;
+}
+
+/* Botón */
+.btn-vermas {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background-color: transparent;
+  border: var(--border);
+  font: var(--btn-normal);
+  transition: var(--transition);
+}
+
+.btn-vermas:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Info extra oculta */
+.sitio-extra {
+  display: none;
+  padding: 1.5rem;
+  background-color: var(--yellow);
+  border-top: var(--border);
+  font: var(--random-text);
+}
+
+.sitio-info h3 {
+  font-size: 2vw !important;
+  font-family: var(--ivypresto);
+}
+
+.sitio-info p {
+  font-size: 1vw !important;
+  font-family: var(--paralucent);
 }
