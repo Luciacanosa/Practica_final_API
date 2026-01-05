@@ -70,3 +70,31 @@ $("a").hover(
     $(".cursor").removeClass("cursor-grow");
   }
 );
+
+
+// ANIMACIÓN AL SCROLL
+document.addEventListener('DOMContentLoaded', () => {
+  const timeline = document.querySelector('.timeline');
+  if (!timeline) return;
+
+  const items = document.querySelectorAll('.container');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        timeline.classList.add('animate');
+
+        items.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('show');
+          }, index * 300);
+        });
+
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(timeline);
+});
