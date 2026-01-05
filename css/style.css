@@ -682,14 +682,14 @@ body.recetas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  padding: 4rem 0;
+  padding: rem 0;
 }
 
 /* Card */
 .receta-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.1rem;
 }
 
 .receta-nombre {
@@ -698,8 +698,8 @@ body.recetas {
 }
 
 .receta-img {
-  width: 100%;
-  height: 260px;
+  width: 90%;
+  height: 560px;
   background-color: #cfcfcf;
 }
 
