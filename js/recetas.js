@@ -212,3 +212,8 @@ $(document).ready(function() {
     $('nav').toggleClass('menu-open');
   });
 });
+
+
+$.get("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail", function(data) {
+  console.log(data); // Verifica que la respuesta sea correcta
+});
