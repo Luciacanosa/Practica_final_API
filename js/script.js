@@ -1,5 +1,5 @@
 // MENÚ
-$(".burger i").on("click", function() {
+$(".burger i").on("click", function () {
   $(this).toggleClass("fa-bars fa-xmark");
   $("nav").toggleClass("menu-open");
 });
@@ -70,3 +70,19 @@ $("a").hover(
     $(".cursor").removeClass("cursor-grow");
   }
 );
+
+fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+  .then((res) => res.json())
+  .then((data) => {
+    const container = document.getElementById("home-recetas");
+    const cocktails = data.drinks.slice(0, 3);
+
+    cocktails.forEach((cocktail) => {
+      container.innerHTML += `
+        <article class="home-receta-card">
+          <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}">
+          <p>${cocktail.strDrink}</p>
+        </article>
+      `;
+    });
+  });

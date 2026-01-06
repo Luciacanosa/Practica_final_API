@@ -1150,3 +1150,37 @@ button {
     width: 100%;
   }
 }
+.home-section {
+  padding: 6rem 4rem;
+  border-bottom: var(--border);
+}
+
+.section-title {
+  font: var(--h2);
+  margin-bottom: 3rem;
+}
+
+.home-recetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.home-receta-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border: var(--border);
+}
+
+.home-receta-card p {
+  margin-top: 1rem;
+  font: var(--random-text);
+}
+
+@media (max-width: 768px) {
+  .home-recetas {
+    grid-template-columns: 1fr;
+  }
+}
