@@ -137,3 +137,7 @@ function showCocktail(drink) {
     }
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  getRandomCocktail(); // Cargar un cóctel aleatorio cuando la página se carga
+});

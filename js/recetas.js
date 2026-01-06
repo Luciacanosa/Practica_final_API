@@ -194,18 +194,18 @@ $(document).ready(function() {
   });
 
   // Función para filtrar por bebida aleatoria
-  $('#randomBtn').click(function(e) {
-    e.preventDefault();
-    $.get("https://www.thecocktaildb.com/api/json/v1/1/random.php", function(data) {
-      const cocktail = data.drinks[0];
-      $(".cocktails").empty().append(
-        `<div class="cocktail">
-          <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}">
-          <h3>${cocktail.strDrink}</h3>
-        </div>`
-      );
-    });
-  });
+  // $('#randomBtn').click(function(e) {
+  //   e.preventDefault();
+  //   $.get("https://www.thecocktaildb.com/api/json/v1/1/random.php", function(data) {
+  //     const cocktail = data.drinks[0];
+  //     $(".cocktails").empty().append(
+  //       `<div class="cocktail">
+  //         <img src="${cocktail.strDrinkThumb}" alt="${cocktail.strDrink}">
+  //         <h3>${cocktail.strDrink}</h3>
+  //       </div>`
+  //     );
+  //   });
+  // });
 
   // Agregar funcionalidad para el menú desplegable (burger menu)
   $('.burger').click(function() {
