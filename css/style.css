@@ -1179,6 +1179,22 @@ button {
   font: var(--random-text);
 }
 
+.home-editorial {
+  padding: 6rem 4rem;
+  border-bottom: var(--border);
+}
+
+.home-editorial h2 {
+  font: var(--h2);
+  margin-bottom: 2rem;
+}
+
+.home-editorial p {
+  max-width: 600px;
+  font: var(--random-text);
+  margin-bottom: 3rem;
+}
+
 @media (max-width: 768px) {
   .home-recetas {
     grid-template-columns: 1fr;
