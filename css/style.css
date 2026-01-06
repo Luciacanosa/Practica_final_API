@@ -1194,6 +1194,16 @@ button {
   font: var(--random-text);
   margin-bottom: 3rem;
 }
+.home-news {
+  padding: 6rem 4rem;
+}
+
+.home-news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin: 3rem 0;
+}
 
 @media (max-width: 768px) {
   .home-recetas {
