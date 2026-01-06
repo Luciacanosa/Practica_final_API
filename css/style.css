@@ -1112,3 +1112,41 @@ button {
   font-size: 1vw !important;
   font-family: var(--paralucent);
 }
+
+/* HOME HERO */
+.home-hero {
+  height: 100vh;
+  border: var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem;
+  gap: 2rem;
+}
+
+.home-title {
+  font: var(--h1);
+  line-height: 0.9;
+}
+
+.home-subtitle {
+  font: var(--h3);
+  max-width: 600px;
+}
+
+.home-cta {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 2rem;
+  }
+
+  .home-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+}
