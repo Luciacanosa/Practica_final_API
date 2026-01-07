@@ -568,13 +568,14 @@ body {
 
 /* SECCIÓN Y DEGRADADO */
 .hero-news {
-  background-color: var(--bg-current);
-  min-height: 80vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  align-items: flex-end;
+  background-color: inherit;
+  font: var(--h1);
+  border: var(--border);
+  padding-top: 20px;
 }
 
 .hero-title {
