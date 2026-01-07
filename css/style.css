@@ -1114,132 +1114,317 @@ button {
   font-family: var(--paralucent);
 }
 
-/* HOME HERO */
-.home-hero {
-  min-height: 100vh;
-  border-bottom: var(--border);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 4rem;
-  gap: 2rem;
+
+
+
+
+
+
+
+
+  /* Contenedor de las categorías */
+  .categories {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 500;
 }
 
-.home-title {
-  font: var(--h1);
-  line-height: 0.9;
+/* Botones de categorías */
+.category-btn {
+    padding: 10px;
+    margin: 5px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    font: var(--h2);
+    font-size: 3rem;
+    z-index: 500;
 }
 
-.home-subtitle {
-  font: var(--h3);
-  max-width: 600px;
-  opacity: 0.85;
+/* Clase para subrayar el botón de categoría seleccionada */
+.category-btn.selected {
+    text-decoration: underline;
+    color: var(--black);  /* Cambiar color de texto si quieres */
 }
 
-.home-cta {
-  display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
+/* Estilo para los botones en general */
+
+
+
+
+
+/* Contenedor de las bebidas (flexbox) */
+.cocktails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* SECCIONES */
-.home-section {
-  padding: 6rem 4rem;
-  border-bottom: var(--border);
+/* Estilo de las tarjetas */
+.cocktail {
+    width: 500px;
+    height: 700px;
+    background-color: inherit;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
 }
 
-.section-title {
-  font: var(--h2);
-  margin-bottom: 3rem;
+/* Imagen dentro de la tarjeta */
+.cocktail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    order: 2;
 }
 
-/* RECETAS PREVIEW */
-.home-recetas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  margin-bottom: 3rem;
+/* Título de la tarjeta */
+.cocktail h3 {
+    text-align: left;
+    font: var(--btn-normal);
+    margin-bottom: 10px;
+    order: 1;
 }
 
-.home-receta-card {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: var(--black);
+/* Hover para hacer la tarjeta un poco más grande */
+.cocktail:hover {
+    transform: scale(1.05);
 }
 
-.home-receta-card img {
+/* Responsividad para pantallas grandes (3 columnas por defecto) */
+@media (max-width: 1024px) {
+    .cocktails {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+/* Responsividad para pantallas medianas (1 columna en dispositivos móviles) */
+@media (max-width: 768px) {
+    .cocktails {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+
+    .category-btn {
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para la sección */
+.cta {
+    display: flex;
+  justify-content: center; /* Centra los elementos en el contenedor */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding: 1.5rem 2rem; /* Ajusta el espacio interior */
+  gap: 10px;
+  }
+  
+  /* Estilo del texto */
+  .cta p {
+    flex: 1; /* El texto ocupa el 50% del espacio */
+    font: var(--random-text);
+    font-size: 1.5rem;
+    margin: 0;
+    padding-left: 100px;
+  }
+  
+  .cta a {
+    margin-right: 100px;
+    margin-left: 20px
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .cta {
+      flex-direction: column; /* Cambia a columna (texto arriba y botón abajo) */
+      align-items: center; /* Centra los elementos */
+      text-align: center; /* Centra el texto */
+    }
+  
+    /* Estilo del texto en pantallas pequeñas */
+    .cta p {
+      margin-bottom: 1rem; /* Espacio abajo del texto */
+      padding-left: 0;
+    }
+  
+    /* Estilo del botón en pantallas pequeñas */
+    .cta a {
+      width: 80%; /* Hace que el botón ocupe el 80% del contenedor */
+      max-width: 300px; /* Para que no se haga demasiado grande */
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* SLICK SLIDER */
+.slick-history {
   width: 100%;
-  height: 320px;
+}
+
+.slick-history img {
+  width: 100%;
+  height: 420px;
   object-fit: cover;
   border: var(--border);
-  transition: transform 0.4s ease;
 }
 
-.home-receta-card:hover img {
-  transform: scale(1.04);
+/* Dots personalizados */
+.slick-dots li button:before {
+  color: black;
+  font-size: 10px;
 }
 
-.home-receta-card p {
-  margin-top: 1rem;
-  font: var(--random-text);
-  letter-spacing: 0.05em;
+.slick-dots li.slick-active button:before {
+  color: black;
 }
 
-/* EDITORIAL */
-.home-editorial {
-  padding: 6rem 4rem;
-  border-bottom: var(--border);
+@media (max-width: 768px) {
+  .slick-history img {
+    height: 300px;
+  }
 }
 
-.home-editorial h2 {
+
+/* HISTORIA – TEXTO + SLIDER */
+.history-extra {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* TEXTO */
+.history-text h2 {
   font: var(--h2);
   margin-bottom: 2rem;
 }
 
-.home-editorial p {
-  max-width: 600px;
+.history-text p {
   font: var(--random-text);
-  margin-bottom: 3rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
-/* NEWS */
-.home-news {
-  padding: 6rem 4rem;
+/* SLIDER */
+.history-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 2rem;
 }
 
-.home-news-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  margin: 3rem 0;
+.slick-history img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border: var(--border);
 }
 
-.home-news p {
-  font: var(--random-text);
-  opacity: 0.7;
+.slick-list {
+  overflow: hidden;
 }
 
-.home-news h3 {
-  font: var(--h3);
-  margin-top: 0.5rem;
+.slick-track {
+  display: flex;
 }
 
-/* RESPONSIVE */
+.history-extra .history-text h2 {
+  font: 300 3rem "ivypresto-display", serif;
+}
+
+
 @media (max-width: 768px) {
-  .home-hero {
-    padding: 2rem;
-  }
-
-  .home-cta {
-    flex-direction: column;
-  }
-
-  .home-recetas {
+  .history-extra {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  .home-news-grid {
-    grid-template-columns: 1fr;
+  .slick-history img {
+    height: 300px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .history-extra {
+    grid-template-columns: 1fr;
+  }
+
+  .history-text {
+    order: 1;
+  }
+
+  .history-slider {
+    order: 2;
+  }
+
+  .slick-history {
+    width: 100%;
+  }
+
+  .slick-history img {
+    height: 60vh;
+  }
+}
+
+

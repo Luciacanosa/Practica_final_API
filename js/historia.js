@@ -98,3 +98,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(timeline);
 });
+
+
+ // SLIDER SLICK
+ $('.slick-history').slick({
+  autoplay: true,
+  autoplaySpeed: 2500,
+  arrows: false,
+  dots: true,
+  fade: true,
+  pauseOnHover: false,
+  adaptiveHeight: true
+});
+
+$(document).ready(function () {
+  $(".slick-history").slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 800,
+    fade: true,
+    pauseOnHover: false,
+  });
+});
+
+$(window).on('resize', function () {
+  $('.slick-history').slick('setPosition');
+});
