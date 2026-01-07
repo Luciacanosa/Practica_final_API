@@ -1272,3 +1272,158 @@ button {
     }
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* SLICK SLIDER */
+.slick-history {
+  width: 100%;
+}
+
+.slick-history img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border: var(--border);
+}
+
+/* Dots personalizados */
+.slick-dots li button:before {
+  color: black;
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .slick-history img {
+    height: 300px;
+  }
+}
+
+
+/* HISTORIA – TEXTO + SLIDER */
+.history-extra {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* TEXTO */
+.history-text h2 {
+  font: var(--h2);
+  margin-bottom: 2rem;
+}
+
+.history-text p {
+  font: var(--random-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* SLIDER */
+.history-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.slick-history img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border: var(--border);
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.history-extra .history-text h2 {
+  font: 300 3rem "ivypresto-display", serif;
+}
+
+
+@media (max-width: 768px) {
+  .history-extra {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .slick-history img {
+    height: 300px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .history-extra {
+    grid-template-columns: 1fr;
+  }
+
+  .history-text {
+    order: 1;
+  }
+
+  .history-slider {
+    order: 2;
+  }
+
+  .slick-history {
+    width: 100%;
+  }
+
+  .slick-history img {
+    height: 60vh;
+  }
+}
+
+
