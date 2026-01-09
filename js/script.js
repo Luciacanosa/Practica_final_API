@@ -1,44 +1,29 @@
 // MENÚ
-$(".burger i").on("click", function() {
+$(".burger i").on("click", function () {
   $(this).toggleClass("fa-bars fa-xmark");
   $("nav").toggleClass("menu-open");
 });
 
-// NEWSLETTER VALIDACIÓN
-
+// NEWSLETTER
 const form = document.getElementById("newsletter-form");
 const emailInput = document.getElementById("newsletter-email");
-
 const defaultPlaceholder = "Escribe tu email";
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const email = emailInput.value.trim();
+    if (!email) return showError("Introduce tu email");
+    if (!emailRegex.test(email)) return showError("Email no válido");
 
-  if (email === "") {
-    showError("Introduce tu email");
-    return;
-  }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!emailRegex.test(email)) {
-    showError("Email no válido");
-    return;
-  }
-
-  // OK
-  emailInput.classList.remove("error");
-  emailInput.placeholder = defaultPlaceholder;
-  alert("¡Gracia's por suscribirte!");
-  form.reset();
-});
-
-emailInput.addEventListener("input", () => {
-  emailInput.classList.remove("error");
-  emailInput.placeholder = defaultPlaceholder;
-});
+    emailInput.classList.remove("error");
+    emailInput.placeholder = defaultPlaceholder;
+    alert("¡Gracias por suscribirte!");
+    form.reset();
+  });
+}
 
 function showError(message) {
   emailInput.value = "";
@@ -49,24 +34,12 @@ function showError(message) {
 // CURSOR
 $(document).mousemove(function (e) {
   $(".cursor").css({
-    left: e.clientX + "px",
-    top: e.clientY + "px",
+    left: e.clientX,
+    top: e.clientY,
   });
 });
 
-document.addEventListener("mousemove", (e) => {
-  const el = document.querySelector(".cursor");
-  if (!el) return;
-  el.style.left = e.clientX + "px";
-  el.style.top = e.clientY + "px";
-});
-
-// Cursos efecto
 $("a").hover(
-  function () {
-    $(".cursor").addClass("cursor-grow");
-  },
-  function () {
-    $(".cursor").removeClass("cursor-grow");
-  }
+  () => $(".cursor").addClass("cursor-grow"),
+  () => $(".cursor").removeClass("cursor-grow")
 );

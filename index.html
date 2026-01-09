@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - Cócteles</title>
+    <title>Home – CO©KTAIL’s</title>
 
     <!-- FAVICON -->
-    <link rel="icon" href="img/favicon.webp" type="image/png">
+    <link rel="icon" href="img/favicon.webp" type="image/png" />
 
-    <!-- ENLACE CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- EMOJIS -->
+    <!-- ICONOS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <!-- TIPOGRAFÍA ADOBE -->
+    <!-- TIPOGRAFÍA -->
     <link rel="stylesheet" href="https://use.typekit.net/nuo4xsn.css" />
   </head>
 
   <body class="theme-pink">
-
     <!-- CURSOR -->
     <div class="cursor"></div>
 
-    <!-- MENÚ WEB -->
+    <!-- NAV -->
     <nav>
       <div class="menu-container">
         <ul class="menu menu-left">
           <li><a href="recetas.html">RECETAS</a></li>
-          <li>
-            <a href="noticias.html" class="btn">NOTICIAS</a>
-          </li>
+          <li><a href="noticias.html" class="btn">NOTICIAS</a></li>
         </ul>
 
         <div class="logo-menu">
@@ -42,7 +39,7 @@
 
         <ul class="menu menu-right">
           <li><a href="historia.html">HISTORIA</a></li>
-          <li><a href="sitios.html" id="menu-lugares">SITIOS</a></li>
+          <li><a href="sitios.html">SITIOS</a></li>
         </ul>
 
         <div class="burger">
@@ -50,6 +47,72 @@
         </div>
       </div>
     </nav>
+
+    <!-- HERO -->
+    <header class="home-hero">
+      <h1 class="home-title">CO©KTAIL’s</h1>
+      <p class="home-subtitle">
+        Cultura, recetas y experiencias alrededor del cóctel
+      </p>
+
+      <div class="home-cta">
+        <a href="recetas.html" class="btn-normal">VER RECETAS</a>
+        <a href="random.html" class="btn-normal">SORPRÉNDEME</a>
+      </div>
+    </header>
+
+    <!-- RECETAS DESTACADAS -->
+    <section class="home-section">
+      <h2 class="section-title">RECETAS DESTACADAS</h2>
+
+      <div class="home-recetas">
+        <a href="recetas.html" class="home-receta-card">
+          <img src="img/recetas/margarita.jpg" alt="Margarita" />
+          <p>Margarita</p>
+        </a>
+
+        <a href="recetas.html" class="home-receta-card">
+          <img src="img/recetas/negroni.jpg" alt="Negroni" />
+          <p>Negroni</p>
+        </a>
+
+        <a href="recetas.html" class="home-receta-card">
+          <img src="img/recetas/mojito.jpg" alt="Mojito" />
+          <p>Mojito</p>
+        </a>
+      </div>
+
+      <a href="recetas.html" class="btn-normal">VER TODAS</a>
+    </section>
+
+    <!-- EDITORIAL -->
+    <section class="home-editorial">
+      <h2>EL ARTE DEL CÓCTEL</h2>
+      <p>
+        Desde la coctelería clásica hasta las nuevas tendencias, exploramos la
+        historia, los sabores y las experiencias que rodean al mundo del cóctel.
+      </p>
+      <a href="historia.html" class="btn-normal">DESCUBRIR HISTORIA</a>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section class="home-news">
+      <h2>ÚLTIMAS NOTICIAS</h2>
+
+      <div class="home-news-grid">
+        <article>
+          <p>TENDENCIAS</p>
+          <h3>Mixología botánica</h3>
+        </article>
+
+        <article>
+          <p>EVENTOS</p>
+          <h3>Noche de Jazz & Gin</h3>
+        </article>
+      </div>
+
+      <a href="noticias.html" class="btn-normal">VER NOTICIAS</a>
+    </section>
 
     <!-- FOOTER -->
     <footer id="footer">
@@ -114,15 +177,8 @@
       </div>
     </footer>
 
-    <!-- JQUERY DE CDN -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- ENLACE JS SCRIPT -->
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

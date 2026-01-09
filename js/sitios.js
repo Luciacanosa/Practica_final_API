@@ -1,5 +1,5 @@
 // MENÚ
-$(".burger i").on("click", function() {
+$(".burger i").on("click", function () {
   $(this).toggleClass("fa-bars fa-xmark");
   $("nav").toggleClass("menu-open");
 });
@@ -70,3 +70,13 @@ $("a").hover(
     $(".cursor").removeClass("cursor-grow");
   }
 );
+
+$(".btn-vermas").on("click", function (e) {
+  e.stopPropagation();
+
+  const card = $(this).closest(".sitio-card");
+  const extra = card.find(".sitio-extra");
+
+  extra.slideToggle(300);
+  card.toggleClass("open");
+});
