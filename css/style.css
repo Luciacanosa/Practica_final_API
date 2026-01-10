@@ -595,6 +595,18 @@ body {
   cursor: pointer;
 }
 
+.news-desc {
+  font-family: var(--paralucent);
+}
+.card-back p {
+  font-family: var(--paralucent);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 1.2rem; /* espacio entre párrafos */
+  color: var(--black);
+}
+
 /* INTERIOR QUE GIRA */
 .card-inner {
   position: relative;
