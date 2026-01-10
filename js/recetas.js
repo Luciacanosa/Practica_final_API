@@ -207,10 +207,6 @@ $(document).ready(function() {
   //   });
   // });
 
-  // Agregar funcionalidad para el menú desplegable (burger menu)
-  $('.burger').click(function() {
-    $('nav').toggleClass('menu-open');
-  });
 });
 
 
