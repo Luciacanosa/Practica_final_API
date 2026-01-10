@@ -545,20 +545,8 @@ nav.menu-open .menu-right {
     font-size: 1.2rem;
   }
 }
+/* ______________________________________ */
 /* NOTICIAS */
-
-/* :root {
-  --black: #000000;
-  --white: #ffffff;
-  --ivypresto: "ivypresto-display", serif;
-  --paralucent: "paralucent", sans-serif;
-
-  --bg-current: #f25e9c; /* Cambia este para el fondo principal */
-/* --menu-bg: transparent;
-
-  --nav-font: 300 1.5rem var(--paralucent);
-  --h1-font: 17vw var(--ivypresto); */
-/* } */
 
 body {
   margin: 0;
@@ -751,6 +739,7 @@ body {
 .news-card:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: var(--blue);
 }
 
 /* IMAGEN */
@@ -800,6 +789,7 @@ body {
     font-size: 2.2rem;
   }
 }
+/* --------------------------------------------------------- */
 
 /* recetas*/
 

@@ -77,3 +77,19 @@ $(".read-more").on("click", function (e) {
     "Esta funcionalidad puede abrir una ventana modal o redirigir a una noticia completa."
   );
 });
+// MOSTRAR TEXTO EXTRA AL HACER CLICK
+$(".news-card").on("click", function () {
+  const extra = $(this).find(".news-extra");
+
+  // Si está cerrado → abrir
+  if (extra.css("max-height") === "0px") {
+    extra.css("max-height", "300px");
+  } else {
+    extra.css("max-height", "0px");
+  }
+});
+
+// OCULTAR TEXTO EXTRA AL SALIR DEL CUADRADO
+$(".news-card").on("mouseleave", function () {
+  $(this).find(".news-extra").css("max-height", "0px");
+});
