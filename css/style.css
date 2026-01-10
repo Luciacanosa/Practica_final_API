@@ -554,7 +554,6 @@ body {
   background-color: var(--white);
 }
 
-/* SECCIÓN Y DEGRADADO */
 .hero-news {
   height: 100vh;
   display: flex;
@@ -573,13 +572,11 @@ body {
   z-index: 2;
 }
 
-/* CONTENEDOR */
 .news-content {
   background-color: var(--white);
   padding: 100px 5%;
 }
 
-/* GRID DE 2 COLUMNAS */
 .news-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -603,25 +600,22 @@ body {
   font-size: 1.1rem;
   line-height: 1.7;
   text-align: justify;
-  margin-bottom: 1.2rem; /* espacio entre párrafos */
+  margin-bottom: 1.2rem;
   color: var(--black);
 }
 
-/* INTERIOR QUE GIRA */
 .card-inner {
   position: relative;
   width: 100%;
-  height: 550px; /* ALTURA FIJA NECESARIA */
+  height: 550px;
   transition: transform 0.8s ease;
   transform-style: preserve-3d;
 }
 
-/* GIRO POR CLICK */
 .news-card.flip .card-inner {
   transform: rotateY(180deg);
 }
 
-/* CARAS */
 .card-front,
 .card-back {
   position: absolute;
@@ -634,7 +628,6 @@ body {
   padding: 20px;
 }
 
-/* CARA TRASERA */
 .card-back {
   transform: rotateY(180deg);
   display: flex;
@@ -643,14 +636,12 @@ body {
   background-color: var(--orange);
 }
 
-/* IMAGEN */
 .news-img img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-/* TEXTO DELANTE */
 .news-info span {
   font-family: var(--paralucent);
   font-size: 0.9rem;
@@ -670,7 +661,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* TEXTO DETRÁS */
 .card-back h3 {
   font-family: var(--ivypresto);
   font-size: 2.2rem;
@@ -695,6 +685,7 @@ body {
 /* AGRANDAR UN POCO AL HACER HOVER */
 .news-card:hover .card-inner {
   transform: scale(1.03) rotateY(0deg);
+  background-color: var(--blue);
 }
 
 /* AGRANDAR TAMBIÉN CUANDO ESTÁ GIRADA */
