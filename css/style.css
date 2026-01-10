@@ -628,6 +628,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--orange);
 }
 
 /* IMAGEN */
@@ -678,6 +679,15 @@ body {
   .news-info h3 {
     font-size: 2.2rem;
   }
+}
+/* AGRANDAR UN POCO AL HACER HOVER */
+.news-card:hover .card-inner {
+  transform: scale(1.03) rotateY(0deg);
+}
+
+/* AGRANDAR TAMBIÉN CUANDO ESTÁ GIRADA */
+.news-card.flip .card-inner {
+  transform: scale(1.03) rotateY(180deg);
 }
 
 /* --------------------------------------------------------- */
@@ -822,15 +832,6 @@ button {
   padding: 2rem 0 0;
   gap: 2rem;
 }
-
-/* .pdf-template {
-  position: absolute;
-  left: -9999px;
-  width: 600px;
-  background: white;
-  padding: 2rem;
-  font-family: "Times New Roman", serif;
-} */
 
 .info-block {
   display: flex;
