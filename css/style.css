@@ -1528,3 +1528,49 @@ button {
     height: 60vh;
   }
 }
+/* HOME – ANIMACIONES SCROLL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HOME – RECETAS HOVER */
+
+.receta-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.receta-hover img {
+  transition: transform 0.5s ease;
+}
+
+.receta-hover::after {
+  content: "VER RECETA";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.receta-hover:hover img {
+  transform: scale(1.1);
+}
+
+.receta-hover:hover::after {
+  opacity: 1;
+}
