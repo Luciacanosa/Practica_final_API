@@ -66,9 +66,17 @@
 
 /* CURSOR */
 html,
-body {
-  cursor: none;
-  scroll-behavior: smooth;
+body,
+a,
+button,
+input,
+textarea {
+  cursor: none !important;
+}
+
+a:hover,
+button:hover {
+  cursor: none !important;
 }
 
 .cursor {
@@ -78,7 +86,7 @@ body {
   background-color: #000;
   border-radius: 50%;
   position: fixed;
-  pointer-events: none;
+  pointer-events: none !important;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease, background-color 0.2s ease;
   z-index: 9999;
