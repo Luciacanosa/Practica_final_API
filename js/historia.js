@@ -1,5 +1,5 @@
 // MENÚ
-$(".burger i").on("click", function() {
+$(".burger i").on("click", function () {
   $(this).toggleClass("fa-bars fa-xmark");
   $("nav").toggleClass("menu-open");
 });
@@ -71,22 +71,21 @@ $("a").hover(
   }
 );
 
-
 // ANIMACIÓN AL SCROLL
-document.addEventListener('DOMContentLoaded', () => {
-  const timeline = document.querySelector('.timeline');
+document.addEventListener("DOMContentLoaded", () => {
+  const timeline = document.querySelector(".timeline");
   if (!timeline) return;
 
-  const items = document.querySelectorAll('.container');
+  const items = document.querySelectorAll(".container");
 
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
-        timeline.classList.add('animate');
+        timeline.classList.add("animate");
 
         items.forEach((item, index) => {
           setTimeout(() => {
-            item.classList.add('show');
+            item.classList.add("show");
           }, index * 300);
         });
 
@@ -97,4 +96,32 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   observer.observe(timeline);
+});
+
+// SLIDER SLICK
+$(".slick-history").slick({
+  autoplay: true,
+  autoplaySpeed: 2500,
+  arrows: false,
+  dots: true,
+  fade: true,
+  pauseOnHover: false,
+  adaptiveHeight: true,
+});
+
+$(document).ready(function () {
+  $(".slick-history").slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 800,
+    fade: true,
+    pauseOnHover: false,
+  });
+});
+
+$(window).on("resize", function () {
+  $(".slick-history").slick("setPosition");
 });

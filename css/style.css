@@ -66,9 +66,17 @@
 
 /* CURSOR */
 html,
-body {
-  cursor: none;
-  scroll-behavior: smooth;
+body,
+a,
+button,
+input,
+textarea {
+  cursor: none !important;
+}
+
+a:hover,
+button:hover {
+  cursor: none !important;
 }
 
 .cursor {
@@ -78,7 +86,7 @@ body {
   background-color: #000;
   border-radius: 50%;
   position: fixed;
-  pointer-events: none;
+  pointer-events: none !important;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease, background-color 0.2s ease;
   z-index: 9999;
@@ -545,20 +553,8 @@ nav.menu-open .menu-right {
     font-size: 1.2rem;
   }
 }
+/* ______________________________________ */
 /* NOTICIAS */
-
-/* :root {
-  --black: #000000;
-  --white: #ffffff;
-  --ivypresto: "ivypresto-display", serif;
-  --paralucent: "paralucent", sans-serif;
-
-  --bg-current: #f25e9c; /* Cambia este para el fondo principal */
-/* --menu-bg: transparent;
-
-  --nav-font: 300 1.5rem var(--paralucent);
-  --h1-font: 17vw var(--ivypresto); */
-/* } */
 
 body {
   margin: 0;
@@ -566,15 +562,15 @@ body {
   background-color: var(--white);
 }
 
-/* SECCIÓN Y DEGRADADO */
 .hero-news {
-  background-color: var(--bg-current);
-  min-height: 80vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  align-items: flex-end;
+  background-color: inherit;
+  font: var(--h1);
+  border: var(--border);
+  padding-top: 20px;
 }
 
 .hero-title {
@@ -590,71 +586,123 @@ body {
 }
 
 .news-grid {
-  max-width: 800px;
-  margin-left: -90px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 180px;
-}
-
-.news-item {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  gap: 60px;
 }
 
-.news-image img {
+/* TARJETA COMO CONTENEDOR 3D */
+.news-card {
+  background-color: transparent;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.news-desc {
+  font-family: var(--paralucent);
+}
+.card-back p {
+  font-family: var(--paralucent);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 1.2rem;
+  color: var(--black);
+}
+
+.card-inner {
+  position: relative;
   width: 100%;
-  height: 500px;
-
-  object-fit: cover;
-  transition: filter 0.5s ease;
+  height: 550px;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
 }
 
-.news-text span {
+.news-card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: var(--white);
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--orange);
+}
+
+.news-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.news-info span {
   font-family: var(--paralucent);
   font-size: 0.9rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.news-text h3 {
+.news-info h3 {
   font-family: var(--ivypresto);
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 1rem 0;
   line-height: 1;
 }
 
-.news-text p {
+.news-desc {
   font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 400px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* esto si qureis quitarlo lo de leer mas para no hacer mas htmls o podemos hacer q lleguen sino a una ventana modal
- */
-.read-more {
-  text-decoration: none;
-  color: var(--black);
-  font-weight: bold;
-  border-bottom: 1px solid var(--black);
-  padding-bottom: 5px;
+.card-back h3 {
+  font-family: var(--ivypresto);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.card-back p {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .news-item {
+  .news-grid {
     grid-template-columns: 1fr;
   }
-  .hero-title {
-    font-size: 25vw;
-  }
-  .news-text h3 {
-    font-size: 2.5rem;
+
+  .news-info h3 {
+    font-size: 2.2rem;
   }
 }
+/* AGRANDAR UN POCO AL HACER HOVER */
+.news-card:hover .card-inner {
+  transform: scale(1.03) rotateY(0deg);
+  background-color: var(--blue);
+}
+
+/* AGRANDAR TAMBIÉN CUANDO ESTÁ GIRADA */
+.news-card.flip .card-inner {
+  transform: scale(1.03) rotateY(180deg);
+}
+
+/* --------------------------------------------------------- */
+
 /* recetas*/
 
 .theme-yellow {
@@ -795,15 +843,6 @@ button {
   padding: 2rem 0 0;
   gap: 2rem;
 }
-
-/* .pdf-template {
-  position: absolute;
-  left: -9999px;
-  width: 600px;
-  background: white;
-  padding: 2rem;
-  font-family: "Times New Roman", serif;
-} */
 
 .info-block {
   display: flex;
@@ -1111,4 +1150,435 @@ button {
 .sitio-info p {
   font-size: 1vw !important;
   font-family: var(--paralucent);
+}
+
+/* Contenedor de las categorías */
+.categories {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  z-index: 500;
+}
+
+/* Botones de categorías */
+.category-btn {
+  padding: 10px;
+  margin: 5px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  font: var(--h2);
+  font-size: 3rem;
+  z-index: 500;
+}
+
+/* Clase para subrayar el botón de categoría seleccionada */
+.category-btn.selected {
+  text-decoration: underline;
+  color: var(--black); /* Cambiar color de texto si quieres */
+}
+
+/* Estilo para los botones en general */
+
+/* Contenedor de las bebidas (flexbox) */
+.cocktails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Estilo de las tarjetas */
+.cocktail {
+  width: 500px;
+  height: 700px;
+  background-color: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+/* Imagen dentro de la tarjeta */
+.cocktail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  order: 2;
+}
+
+/* Título de la tarjeta */
+.cocktail h3 {
+  text-align: left;
+  font: var(--btn-normal);
+  margin-bottom: 10px;
+  order: 1;
+}
+
+/* Hover para hacer la tarjeta un poco más grande */
+.cocktail:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividad para pantallas grandes (3 columnas por defecto) */
+@media (max-width: 1024px) {
+  .cocktails {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
+
+/* Responsividad para pantallas medianas (1 columna en dispositivos móviles) */
+@media (max-width: 768px) {
+  .cocktails {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+
+  .category-btn {
+    font-size: 3rem;
+  }
+}
+
+/* Estilos para la sección */
+.cta {
+  display: flex;
+  justify-content: center; /* Centra los elementos en el contenedor */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding: 1.5rem 2rem; /* Ajusta el espacio interior */
+  gap: 10px;
+}
+
+/* Estilo del texto */
+.cta p {
+  flex: 1; /* El texto ocupa el 50% del espacio */
+  font: var(--random-text);
+  font-size: 1.5rem;
+  margin: 0;
+  padding-left: 100px;
+}
+
+.cta a {
+  margin-right: 100px;
+  margin-left: 20px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .cta {
+    flex-direction: column; /* Cambia a columna (texto arriba y botón abajo) */
+    align-items: center; /* Centra los elementos */
+    text-align: center; /* Centra el texto */
+  }
+
+  /* Estilo del texto en pantallas pequeñas */
+  .cta p {
+    margin-bottom: 1rem; /* Espacio abajo del texto */
+    padding-left: 0;
+  }
+
+  /* Estilo del botón en pantallas pequeñas */
+  .cta a {
+    width: 80%; /* Hace que el botón ocupe el 80% del contenedor */
+    max-width: 300px; /* Para que no se haga demasiado grande */
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+/* HERO */
+.home-hero {
+  height: 100vh;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: var(--border);
+}
+
+.home-title {
+  font: var(--h1);
+}
+
+.home-subtitle {
+  font: var(--random-text);
+  margin: 2rem 0 3rem;
+  max-width: 600px;
+}
+
+.home-cta {
+  display: flex;
+  gap: 2rem;
+}
+
+/* SECCIONES */
+.home-section {
+  padding: 6rem 4rem;
+  text-align: center;
+  border-bottom: var(--border);
+}
+
+.section-title {
+  font: var(--h2);
+  margin-bottom: 4rem;
+}
+
+/* RECETAS DESTACADAS */
+.home-recetas {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.home-receta-card {
+  width: 280px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.home-receta-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border: var(--border);
+  margin-bottom: 1rem;
+}
+
+.home-receta-card p {
+  font: var(--h3);
+}
+
+/* EDITORIAL */
+.home-editorial {
+  padding: 6rem 4rem;
+  text-align: center;
+  border-bottom: var(--border);
+}
+
+.home-editorial h2 {
+  font: var(--h2);
+  margin-bottom: 2rem;
+}
+
+.home-editorial p {
+  font: var(--random-text);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+/* NOTICIAS */
+.home-news {
+  padding: 6rem 4rem;
+  text-align: center;
+  border-bottom: var(--border);
+}
+
+.home-news h2 {
+  font: var(--h2);
+  margin-bottom: 4rem;
+}
+
+.home-news-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.home-news-grid article {
+  width: 300px;
+  text-align: left;
+  border: var(--border);
+  padding: 2rem;
+}
+
+.home-news-grid p {
+  font: var(--random-text);
+  letter-spacing: 2px;
+}
+
+.home-news-grid h3 {
+  font: var(--h3);
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE HOME */
+@media (max-width: 768px) {
+  .home-recetas,
+  .home-news-grid,
+  .home-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-section,
+  .home-editorial,
+  .home-news {
+    padding: 4rem 2rem;
+  }
+
+  .home-title {
+    font-size: 20vw;
+  }
+}
+
+/* SLICK SLIDER */
+.slick-history {
+  width: 100%;
+}
+
+.slick-history img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border: var(--border);
+}
+
+/* Dots personalizados */
+.slick-dots li button:before {
+  color: black;
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .slick-history img {
+    height: 300px;
+  }
+}
+
+/* HISTORIA – TEXTO + SLIDER */
+.history-extra {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* TEXTO */
+.history-text h2 {
+  font: var(--h2);
+  margin-bottom: 2rem;
+}
+
+.history-text p {
+  font: var(--random-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* SLIDER */
+.history-slider {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.slick-history img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border: var(--border);
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.history-extra .history-text h2 {
+  font: 300 3rem "ivypresto-display", serif;
+}
+
+@media (max-width: 768px) {
+  .history-extra {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .slick-history img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-extra {
+    grid-template-columns: 1fr;
+  }
+
+  .history-text {
+    order: 1;
+  }
+
+  .history-slider {
+    order: 2;
+  }
+
+  .slick-history {
+    width: 100%;
+  }
+
+  .slick-history img {
+    height: 60vh;
+  }
+}
+/* HOME – ANIMACIONES SCROLL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HOME – RECETAS HOVER */
+
+.receta-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.receta-hover img {
+  transition: transform 0.5s ease;
+}
+
+.receta-hover::after {
+  content: "VER RECETA";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.receta-hover:hover img {
+  transform: scale(1.1);
+}
+
+.receta-hover:hover::after {
+  opacity: 1;
 }
